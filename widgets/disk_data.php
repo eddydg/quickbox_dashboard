@@ -66,7 +66,7 @@ if (file_exists('/install/.quota.lock')) {
           }
           //hard disk
           $dftotal = round(@disk_total_space(".")/(1024*1024*1024),3); //Total
-          $dffree = round(@disk_free_space(".")/(1024*1024*1024),3); //Available
+          $dffree = round(@disk_free_space(".")/(1024*1024*1024),2); //Available
           $dfused = $dftotal-$dffree; //used
           $perused = (floatval($dftotal)!=0)?round($dfused/$dftotal*100,2):0;
           //$perused = sprintf('%1.0f', $bytesused / $bytestotal * 100);
@@ -78,8 +78,8 @@ if (file_exists('/home/'.$username.'/.sessions/rtorrent.lock')) {
 
 ?>
 
-                  <p class="nomargin">Free: <span style="font-weight: 700; position: absolute; left: 70px;"><?php echo "$dffree"; ?> <b>GB</b></span></p>
-                  <p class="nomargin">Used: <span style="font-weight: 700; position: absolute; left: 70px;"><?php echo "$dfused"; ?> <b>GB</b></span></p>
+                  <p class="nomargin">Free: <span style="font-weight: 700; position: absolute; left: 70px;"><?php echo sprintf('%01.2f', $dffree); ?> <b>GB</b></span></p>
+                  <p class="nomargin">Used: <span style="font-weight: 700; position: absolute; left: 70px;"><?php echo sprintf('%01.2f', $dfused); ?> <b>GB</b></span></p>
                   <p class="nomargin">Size: <span style="font-weight: 700; position: absolute; left: 70px;"><?php echo "$dftotal"; ?> <b>GB</b></span></p>
                   <div class="row">
                     <div class="col-sm-8">
