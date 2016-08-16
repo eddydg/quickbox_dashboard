@@ -25,5 +25,5 @@ if (count($_SESSION['rx'])>60)
 
 // # json_encode didnt work, if you found a workarround pls write m
 //echo json_encode($data, JSON_FORCE_OBJECT);
-echo '{"label":"'.$venet0.'","data":['.implode($_SESSION['rx'], ",").']}';
+echo '{"label":"venet0","data":['.implode($_SESSION['rx'], ",").']}';
 ?>
