@@ -66,7 +66,7 @@
               </div>
 
             </div>
-            <?php if ($username == "$master") { ?>
+            <?php if (false && $username == "$master") { ?>
             <div class="panel panel-inverse">
               <ul class="panel-options">
                 <li><a class="panel-minimize"><i class="fa fa-chevron-down"></i></a></li>

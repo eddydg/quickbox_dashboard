@@ -43,27 +43,18 @@
           <h5 class="sidebar-title">Main Menu</h5>
           <ul class="nav nav-pills nav-stacked nav-quirk">
             <li class="active"><a href="index.php"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
-            <li><a class="grayscale" href="/rutorrent" target="_blank"><img src="img/brands/rtorrent.png" class="brand-ico"> <span>ruTorrent</span></a></li>
-            <?php if (processExists("deluge-web",$username)) { ?>
-              <li><a class="grayscale" href="<?php echo "$dwURL"; ?>" target="_blank"><img src="img/brands/deluge.png" class="brand-ico"> <span>Deluge Web</span></a></li>
-            <?php } ?>
-            <?php if ($username == "$master") { ?>
-              <?php if (file_exists('/install/.btsync.lock')) { ?>
-                <li><a class="grayscale" href="<?php echo "$btsyncURL"; ?>" target="_blank"><img src="img/brands/btsync.png" class="brand-ico"> <span>BTSync</span></a></li>
-              <?php } ?>
-              <?php if (file_exists('/install/.plex.lock')) { ?>
-                <li><a class="grayscale" href="<?php echo "$plexURL"; ?>" target="_blank"><img src="img/brands/plex.png" class="brand-ico"> <span>Plex</span></a></li>
-              <?php } ?>
-              <?php if (file_exists('/install/.rapidleech.lock')) { ?>
-                <li><a class="grayscale" href="<?php echo "$rapidleechURL"; ?>" target="_blank"><img src="img/brands/rapidleech.png" class="brand-ico"> <span>Rapidleech</span></a></li>
-              <?php } ?>
-              <?php if (file_exists('/install/.sickrage.lock')) { ?>
-                <li><a class="grayscale" href="<?php echo "$sickrageURL"; ?>" target="_blank"><img src="img/brands/sickrage.png" class="brand-ico"> <span>SickRage</span></a></li>
-              <?php } ?>
-              <?php if (processExists("mono",$username) && file_exists('/install/.sonarr.lock')) { ?>
-                <li><a class="grayscale" href="<?php echo "$sonarrURL"; ?>" target="_blank"><img src="img/brands/sonarr.png" class="brand-ico"> <span>Sonarr</span></a></li>
-              <?php } ?>
-            <?php } ?>
+
+            <li><a href="http://149.91.82.32:8081/home/" target="_blank"><i class="fa fa-desktop"></i> <span>SickRage</span></a></li>
+            <li><a href="http://149.91.82.32:5050/" target="_blank"><i class="fa fa-film"></i> <span>CouchPotato</span></a></li>
+            <li><a href="http://149.91.82.32:9000/" target="_blank"><i class="fa fa-play-circle"></i> <span>Peerflix</span></a></li>
+            <li><a href="/rutorrent" target="_blank"><i class="fa fa-puzzle-piece"></i> <span>ruTorrent</span></a></li>
+            <!--<li><a href="https://149.91.82.32:943/admin" target="_blank"><i class="fa fa-server"></i> <span>OpenVPN</span></a></li>-->
+            <li><a href="https://cake.meltedpeng.com" target="_blank"><i class="fa fa-birthday-cake"></i> <span>CakeBox</span></a></li>
+            <li><a href="http://149.91.82.32/munin" target="_blank"><i class="fa fa-bar-chart"></i> <span>Munin</span></a></li>
+            <li><a href="https://meltedpeng.com/glype" target="_blank"><i class="fa fa-globe"></i> <span>Glype Proxy</span></a></li>
+            <li><a href="http://149.91.82.32:61208" target="_blank"><i class="fa fa-eye"></i> <span>Glances</span></a></li>
+            <li><a href="http://149.91.82.32/aria2" target="_blank"><i class="fa fa-cloud-download"></i> <span>Aria2</span></a></li>
+
             <li class="nav-parent">
               <a href=""><i class="fa fa-download"></i> <span>Downloads</span></a>
               <ul class="children">
