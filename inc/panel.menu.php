@@ -52,6 +52,7 @@
             <li><a href="https://cake.meltedpeng.com" target="_blank"><i class="fa fa-birthday-cake"></i> <span>CakeBox</span></a></li>
             <li><a href="http://149.91.82.32/munin" target="_blank"><i class="fa fa-bar-chart"></i> <span>Munin</span></a></li>
             <li><a href="https://meltedpeng.com/glype" target="_blank"><i class="fa fa-globe"></i> <span>Glype Proxy</span></a></li>
+            <li><a href="https://meltedpeng.com/miniProxy/miniProxy.php" target="_blank"><i class="fa fa-globe"></i> <span>MiniProxy</span></a></li>
             <li><a href="http://149.91.82.32:61208" target="_blank"><i class="fa fa-eye"></i> <span>Glances</span></a></li>
             <li><a href="http://149.91.82.32/aria2" target="_blank"><i class="fa fa-cloud-download"></i> <span>Aria2</span></a></li>
 
@@ -64,9 +65,13 @@
                 <?php } ?>
               </ul>
             </li>
+
+            <?php if (false){ ?>
             <li><a href="?reload=true"><i class="fa fa-refresh"></i> <span>Reload Services</span></a></li>
             <?php if ($username == "$master") { ?>
             <li><a href="/<?php echo "$username"; ?>.console"><i class="fa fa-keyboard-o"></i> <span>Web Console</span></a></li>
+            <?php } ?>
+
             <?php } ?>
           </ul>
         </div><!-- tab pane -->
